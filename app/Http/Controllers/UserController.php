@@ -39,6 +39,8 @@ class UserController extends Controller
             'phone' => $request->phone,
             'role' => $request->role,
             'password' => Hash::make($request->password),
+            'posision' => $request->posision,
+            'department' => $request->department,
         ]);
 
         return redirect()->route('users.index')->with('berhasil','users berhasil di tambahkan');
@@ -62,6 +64,8 @@ class UserController extends Controller
             'email' => $request->email,
             'phone' => $request->phone,
             'role' => $request->role,
+            'posision' => $request->posision,
+            'department' => $request->department,
         ]);
 
         //if password filled
@@ -81,5 +85,5 @@ class UserController extends Controller
             $user->delete();
             return redirect()->route('users.index')->with('berhasil', 'users berhasil di hapus');
         }
-    
+
 }

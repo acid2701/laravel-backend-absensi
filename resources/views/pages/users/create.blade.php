@@ -87,6 +87,32 @@
                                 <input type="number" class="form-control" name="phone">
                             </div>
                             <div class="form-group">
+                                <label>Posision</label>
+                                <input type="text"
+                                    class="form-control @error('posision')
+                                is-invalid
+                            @enderror"
+                                    name="posision">
+                                @error('posision')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label>Department</label>
+                                <input type="text"
+                                    class="form-control @error('department')
+                                is-invalid
+                            @enderror"
+                                    name="department">
+                                @error('department')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
                                 <label class="form-label">Roles</label>
                                 <div class="selectgroup w-100">
                                     <label class="selectgroup-item">

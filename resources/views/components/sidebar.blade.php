@@ -4,7 +4,7 @@
             <a href="index.html">RS PKU 'AISYIYAH BOYOLALI</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">PKU</a>
+            <a href="index.html">SIMAMAD</a>
         </div>
         <ul class="sidebar-menu">
             <li class="nav-item">
