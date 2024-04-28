@@ -19,8 +19,19 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'acid',
             'email' => 'acidprjct@gmail.com',
-            'password' => Hash::make('acid27')
+            'password' => Hash::make('acid')
         ]);
 
+            //data dummy for company
+\App\Models\Company::create([
+    'name' => 'RS PKU AISYIYAH BOYOLALI',
+    'email' => 'rspkuboyolali@gmail.com',
+    'address' => 'Jl. Pasar Sapi Baru Singkil, Karanggeneng, Kec. Boyolali, Jawa Tengah 57312',
+    'latitude' =>'-7.520085495795877',
+    'longitude' =>'110.6069053',
+    'radius_km' =>'1',
+    'time_in' => '07.00',
+    'time_out' => '14.00',
+    ]);
     }
 }
