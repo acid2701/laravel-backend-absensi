@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(10)->create();
+        //User::factory(10)->create();
 
         User::factory()->create([
             'name' => 'acid',
@@ -33,5 +33,10 @@ class DatabaseSeeder extends Seeder
     'time_in' => '07.00',
     'time_out' => '14.00',
     ]);
+
+    $this->call([
+        AttendanceSeeder::class,
+    ]);
+
     }
 }

@@ -42,6 +42,30 @@ return response(['user' => $user, ' token' => $token], 200);
 
         return response(['message' => 'logged out'], 200);
     }
+
+        //update image profile & face_embedding
+        public function updateProfile(Request $request)
+        {
+            $request->validate([
+                'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+                'face_embedding' => 'required',
+            ]);
+
+            $user = $request->user();
+            $image = $request->file('image');
+            $face_embeding = $request->face_embeding;
+
+            //save image
+            $image->storeAs('public/images', $image->hashName());
+            $user->image_url = $image->hashName();
+            $user->face_embeding = $face_embeding;
+            $user->save();
+
+            return response([
+                'message' => 'Profile updated',
+                'user' => $user,
+            ], 200);
+        }
 }
 
 
