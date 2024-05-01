@@ -1,18 +1,18 @@
 <?php
 
 namespace Database\Seeders;
-use App\Models\Attendance;
+
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class AttendanceSeeder extends Seeder
+class PermissionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        //data dummy for attendance auto generated
-        Attendance::factory(20)->create();
+        // auto-generate 
+        \App\Models\Permission::factory(15)->create();
     }
 }
